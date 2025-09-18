@@ -1,5 +1,7 @@
-# flutter-sandbox-20250918
+# My First Flutter Sandbox
 Beginner-level hands-on Flutter project for playing around testing and breaking things without consequences.
+
+Created on Thursday 18th September 2025.
 
 ---
 
