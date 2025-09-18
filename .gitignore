@@ -23,22 +23,25 @@
 .pub/
 .pub-cache/
 .pub-preload-cache/
-.flutter-plugins
-.flutter-plugins-dependencies
 **/doc/api/
 **/generated_plugin_registrant.dart
 build/
 coverage/
 
-# FVM (Flutter Version Management) (v3+)
-.fvm/        # ignore all local SDKs/caches
-# keep .fvmrc under version control
+# Flutter deps
+.melos_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
 
 # Analyzer artifacts (legacy but harmless to ignore)
 flutter_*.png
 linked_*.ds
 unlinked.ds
 unlinked_spec.ds
+
+# FVM (Flutter Version Management) (v3+)
+.fvm/        # ignore all local SDKs/caches
+# keep .fvmrc under version control
 
 # -------------------------------
 # Android
@@ -112,6 +115,13 @@ unlinked_spec.ds
 # Symbols
 # -------------------------------
 app.*.symbols
+
+# -------------------------------
+# Optional
+# -------------------------------
+# Firebase (optional)
+# google-services.json
+# GoogleService-Info.plist
 
 # -------------------------------
 # Exceptions from above rules (keep)
