@@ -1,15 +1,11 @@
 # flutter-sandbox-20250918
 Beginner-level hands-on Flutter project for playing around testing and breaking things without consequences.
 
-⸻
+---
 
 ## 🔧 Flutter Version Management (FVM)
 
-This project uses [FVM](https://fvm.app/) to pin the Flutter SDK version, ensuring consistency across all contributors and CI/CD.
-
-# Project Name
-
-This Flutter project uses **[FVM (Flutter Version Management)](https://fvm.app/)** to ensure all contributors and CI/CD pipelines use the exact same Flutter and Dart versions.
+This Flutter project uses **[FVM (Flutter Version Management)](https://fvm.app/)** to pin the Flutter and Dart versions, ensuring consistency across all contributors and CI/CD.
 
 ### Setup
 
@@ -19,7 +15,7 @@ Install the pinned Flutter version:
 fvm install
 ```
 
-This will install the version defined in .fvmrc and create a local symlink under .fvm/.
+This will install the version defined in `.fvmrc` and create a local symlink under `.fvm/`.
 
 ### Usage
 
@@ -85,18 +81,19 @@ To confirm you’re using the right SDK:
 fvm flutter doctor
 ```
 
-The SDK path should point inside your ~/.fvm/versions/ directory.
+The SDK path should point inside your `~/.fvm/versions/` directory.
 
-### Version Control
-✅ Commit .fvmrc (the source of truth for the Flutter version).
-🚫 Ignore .fvm/ (local SDK files, caches, and symlinks).
+## Version Control
+✅ Commit `.fvmrc` (the source of truth for the Flutter version).
 
-Note for legacy projects (FVM v2 and below):
-Older versions used .fvm/fvm_config.json instead of .fvmrc. If you are maintaining such a project, commit fvm_config.json instead, and add an exception rule to your .gitignore (see below).
+🚫 Ignore `.fvm/` (local SDK files, caches, and symlinks).
+
+⚠️ Note for legacy projects (FVM v2 and below):
+Older versions used `.fvm/fvm_config.json` instead of `.fvmrc.` If you are maintaining such a project, commit `fvm_config.json` instead, and add an exception rule to your `.gitignore` (see below).
 
 ---
 
-## 📄 `.gitignore` (modern, FVM v3+)
+### 📄 `.gitignore` (modern, FVM v3+)
 
 ```gitignore
 # Flutter / Dart
@@ -134,9 +131,7 @@ lib/generated_plugin_registrant.dart
 # keep .fvmrc under version control
 ```
 
-⸻
-
-## 📄 .gitignore (legacy FVM v2 projects)
+### 📄 `.gitignore` (legacy FVM v2 projects)
 
 ```gitignore
 # FVM (legacy v2)
