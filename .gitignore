@@ -7,6 +7,8 @@
 *.ipr
 *.iws
 *.class
+*.swp
+*.swo
 *.lock
 *.log
 *.pyc
