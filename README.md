@@ -11,17 +11,49 @@ This Flutter project uses **[FVM (Flutter Version Management)](https://fvm.app/)
 
 ### Setup
 
-Install the pinned Flutter version:
+Option 1 - New or existing Flutter project without FVM:
 
 ```bash
-fvm install
+mkdir your-flutter-project && cd your-flutter-project
+fvm use <version>  # Writes/updates .fvmrc, sets up .fvm/ directory, downloads version (if needed) and creates a local symlink under `.fvm/`
 ```
 
-This will install the version defined in `.fvmrc` and create a local symlink under `.fvm/`.
+Option 2 - Clone existing project already using FVM:
+
+```bash
+git clone <repository>
+cd <project-directory>  # .fvmrc already exists from the repo
+fvm install  # Installs the version specified in .fvmrc
+```
 
 ### Usage
 
-Run all Flutter/Dart commands through FVM to ensure consistency:
+Key FVM commands:
+
+```bash
+# Information commands:
+fvm releases  # List all available Flutter releases
+fvm list  # List versions installed locally
+fvm which  # Show current Flutter SDK path
+
+# Project-specific Flutter version management:
+fvm use stable  # Set project to use stable
+fvm use beta  # Set project to use beta  
+fvm use 3.22.0  # Set project to use specific version
+
+# Global Flutter version management (affects all projects without .fvmrc):
+fvm global stable
+fvm global beta
+fvm global 3.22.0
+
+# Cleanup commands:
+rm -rf .fvm .fvmrc  # Remove FVM from current project; keep existing .gitignore
+fvm cleanup  # Remove unused Flutter versions globally
+fvm remove  # Remove a specific installed Flutter version globally
+fvm remove --all  # Removes ALL installed Flutter versions globally
+```
+
+Always run Flutter/Dart commands through FVM to ensure the project uses the pinned version:
 
 ```bash
 fvm flutter pub get
@@ -37,9 +69,20 @@ In IDEs (VS Code, Android Studio, IntelliJ), point the Flutter SDK path to:
 <project>/.fvm/flutter_sdk
 ```
 
-After this, IDE buttons like Pub get, Run, and Test will use the FVM-managed SDK.
+After this, IDE buttons like `Pub get`, `Run`, and `Test` will automatically use the FVM-managed SDK.
 
-### CI/CD
+### Verification
+
+To confirm you’re using the right SDK:
+
+```bash
+fvm flutter --version
+fvm flutter doctor
+```
+
+The SDK path should point inside your `~/.fvm/versions/` directory.
+
+## CI/CD
 
 Example GitHub Actions workflow:
 
@@ -74,16 +117,6 @@ jobs:
           fvm flutter pub get
           fvm flutter test
 ```
-
-### Verification
-
-To confirm you’re using the right SDK:
-
-```bash
-fvm flutter doctor
-```
-
-The SDK path should point inside your `~/.fvm/versions/` directory.
 
 ## Version Control
 ✅ Commit `.fvmrc` (the source of truth for the Flutter version).
