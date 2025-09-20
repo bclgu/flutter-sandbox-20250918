@@ -7,7 +7,7 @@ Created on Thursday 18th September 2025.
 
 ## 🔧 Flutter Version Management (FVM)
 
-This Flutter project uses **[FVM (Flutter Version Management)](https://fvm.app/)** to pin the Flutter and Dart versions, ensuring consistency across all contributors and CI/CD.
+The Flutter projects in this repo use **[FVM (Flutter Version Management)](https://fvm.app/)** to pin the Flutter and Dart versions, ensuring consistency across all contributors and CI/CD.
 
 ### Setup
 
