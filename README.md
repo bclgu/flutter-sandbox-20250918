@@ -125,36 +125,6 @@ jobs:
 🚫 Ignore `.fvm/` (local SDK files, caches, and symlinks).
 
 ```gitignore
-# IDE & System
-*.lock
-*.log
-*.swo
-*.swp
-.DS_Store
-*.iml
-*.ipr
-*.iws
-.idea/
-.vscode/
-
-# Flutter / Dart
-lib/generated_plugin_registrant.dart
-.dart_tool/
-.packages
-.pub-cache/
-.pub/
-/build/
-/coverage/
-
-# Flutter deps
-.melos_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-
-# Firebase (optional)
-# google-services.json
-# GoogleService-Info.plist
-
 # FVM (Flutter Version Management)
 .fvm/
 # ignore all local SDKs/caches
@@ -170,5 +140,6 @@ Older versions used `.fvm/fvm_config.json` instead of `.fvmrc.` If you are maint
 ```gitignore
 # FVM (legacy v2)
 .fvm/
-!.fvm/fvm_config.json   # keep config, ignore everything else
+!.fvm/fvm_config.json
+# keep config, ignore everything else under .fvm/
 ```
