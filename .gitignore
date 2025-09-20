@@ -1,34 +1,44 @@
 # -------------------------------
 # IDE & System
 # -------------------------------
-.idea/
-.vscode/
-*.iml
-*.ipr
-*.iws
 *.class
-*.swp
-*.swo
 *.lock
 *.log
 *.pyc
+*.swo
 *.swp
 .DS_Store
+.atom/
+.build/
 .buildlog/
 .history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+.vscode/
 
 # -------------------------------
 # Flutter / Dart / Pub
 # -------------------------------
-.dart_tool/
-.packages
-.pub/
-.pub-cache/
-.pub-preload-cache/
 **/doc/api/
 **/generated_plugin_registrant.dart
-build/
-coverage/
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.pub-preload-cache/
+/build/
+/coverage/
 
 # Flutter deps
 .melos_tool/
@@ -43,8 +53,18 @@ unlinked_spec.ds
 
 # FVM (Flutter Version Management) (v3+)
 .fvm/
-# ignore all local SDKs/caches and
+# ignore all local SDKs/caches
 # keep .fvmrc under version control
+
+# -------------------------------
+# Symbols
+# -------------------------------
+app.*.symbols
+
+# -------------------------------
+# Obfuscation
+# -------------------------------
+app.*.map.json
 
 # -------------------------------
 # Android
@@ -55,6 +75,11 @@ unlinked_spec.ds
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
 *.jks
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
 
 # DO NOT ignore the Gradle wrapper; commit these:
 # (gradle-wrapper.jar, gradlew, gradlew.bat) — needed for reproducible builds
@@ -113,11 +138,6 @@ unlinked_spec.ds
 **/linux/flutter/generated_plugin_registrant.cc
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
-
-# -------------------------------
-# Symbols
-# -------------------------------
-app.*.symbols
 
 # -------------------------------
 # Optional
