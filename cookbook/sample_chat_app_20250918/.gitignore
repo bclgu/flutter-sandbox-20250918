@@ -53,8 +53,8 @@ unlinked_spec.ds
 
 # FVM (Flutter Version Management) (v3+)
 .fvm/
-# ignore all local SDKs/caches and
-# keep .fvmrc under version control
+# ignore all local SDKs/caches
+# only keep .fvmrc under version control
 
 # -------------------------------
 # Symbols
