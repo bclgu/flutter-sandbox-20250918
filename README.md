@@ -28,7 +28,7 @@ fvm install  # Installs the version specified in .fvmrc
 
 ### Usage
 
-Key FVM commands:
+Key FVM (v3+) commands:
 
 ```bash
 # Information commands:
