@@ -82,7 +82,7 @@ fvm flutter doctor
 
 The SDK path should point inside your `~/.fvm/versions/` directory.
 
-## CI/CD
+### CI/CD
 
 Example GitHub Actions workflow:
 
@@ -118,17 +118,11 @@ jobs:
           fvm flutter test
 ```
 
-## Version Control
+### 📄 `.gitignore` (modern, FVM v3+)
+
 ✅ Commit `.fvmrc` (the source of truth for the Flutter version).
 
 🚫 Ignore `.fvm/` (local SDK files, caches, and symlinks).
-
-⚠️ Note for legacy projects (FVM v2 and below):
-Older versions used `.fvm/fvm_config.json` instead of `.fvmrc.` If you are maintaining such a project, commit `fvm_config.json` instead, and add an exception rule to your `.gitignore` (see below).
-
----
-
-### 📄 `.gitignore` (modern, FVM v3+)
 
 ```gitignore
 # Flutter / Dart
@@ -167,6 +161,10 @@ lib/generated_plugin_registrant.dart
 ```
 
 ### 📄 `.gitignore` (legacy FVM v2 projects)
+
+⚠️ Note for legacy projects (FVM v2 and below):
+
+Older versions used `.fvm/fvm_config.json` instead of `.fvmrc.` If you are maintaining such a project, commit `fvm_config.json` instead, and add an exception rule to your `.gitignore` (see below).
 
 ```gitignore
 # FVM (legacy v2)
