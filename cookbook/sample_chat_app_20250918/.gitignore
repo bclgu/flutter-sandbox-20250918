@@ -140,9 +140,8 @@ app.*.map.json
 **/linux/flutter/generated_plugins.cmake
 
 # -------------------------------
-# Optional
-# -------------------------------
 # Firebase (optional)
+# -------------------------------
 # google-services.json
 # GoogleService-Info.plist
 
